@@ -55,7 +55,8 @@ public:
         uint8_t t_sb = 0;  // 0.5 ms → fastest continuous output
     };
 
-    explicit BMP280(const Config &cfg = Config{}) : cfg_(cfg) {}
+    BMP280() : cfg_() {}
+    explicit BMP280(const Config &cfg) : cfg_(cfg) {}
 
     esp_err_t begin() {
         // Configure and install I2C master driver
