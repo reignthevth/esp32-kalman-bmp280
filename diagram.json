@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Kalman Filter Project",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 100,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-bmp280",
+      "id": "bmp",
+      "top": 0,
+      "left": 300,
+      "attrs": { "address": "0x76" }
+    }
+  ],
+  "connections": [
+    [ "esp:3V3",   "bmp:VCC", "red",   [] ],
+    [ "esp:GND.1", "bmp:GND", "black", [] ],
+    [ "esp:21",    "bmp:SDA", "blue",  [] ],
+    [ "esp:22",    "bmp:SCL", "green", [] ]
+  ],
+  "dependencies": {}
+}

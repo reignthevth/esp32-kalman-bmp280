@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/barometer_kalman.bin"
+elf     = "build/barometer_kalman.elf"
